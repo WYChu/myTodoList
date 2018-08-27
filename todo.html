@@ -1,0 +1,21 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<body>
+    <div id="my-todo">
+        <input type="text" v-model="doSomething">
+        <input type="button" @click="insert" value="加入待辦事項">
+        <span>{{ errorMessage }}</span>
+        <br>
+        <ol>
+            <li v-for="(myList,index) in myLists" @click="remove(index)">{{ myList }}</li>
+        </ol>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+<script src="todo.js"></script>
+<link rel="stylesheet" href="todo.css">
+</html>
